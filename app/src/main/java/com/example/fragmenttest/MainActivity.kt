@@ -3,6 +3,7 @@ package com.example.fragmenttest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fragmenttest.adapters.MyPagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
     lateinit var myPagerAdapter : MyPagerAdapter
@@ -17,6 +18,8 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
 
+        myPagerAdapter = MyPagerAdapter(supportFragmentManager)
+        myViewPager.adapter=myPagerAdapter
 
     }
 
