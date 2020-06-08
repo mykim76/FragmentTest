@@ -46,7 +46,7 @@ class MyProfileFragment : BaseFragment(){
 
         getNickBtn.setOnClickListener {
             val name = nickTxt.text.toString()
-            val myIntent = Intent(mContext, MainActivity::class.java)
+            val myIntent = Intent(mContext, NickNameActivity::class.java)
             myIntent.putExtra("nowNick",name)
             startActivityForResult(myIntent,REQ_MESSAGE_CODE)
         }
