@@ -31,17 +31,23 @@ class StudentListFragment : BaseFragment() {
         setupEvents()
     }
 
+    override fun setupEvents() {
+
+    }
+
     override fun setValues() {
-        students.add(Student("조경진",1988,false))
-        students.add(Student("김미영",2010,false))
-        students.add(Student("김성우",1982,true))
-        students.add(Student("김형근",1998,true))
+        addStudents()
 
         studentAdapter = StudentAdapter(mContext,R.layout.list_student,students)
         stduentListView.adapter = studentAdapter
     }
 
-    override fun setupEvents() {
-
+    fun addStudents()
+    {
+        //alt + [students] 블럭을 선택후 아래로 내리면 블럭 일괄 수정 가능
+        students.add(Student("조경진",1988,false))
+        students.add(Student("김미영",2010,false))
+        students.add(Student("김성우",1982,true))
+        students.add(Student("김형근",1998,true))
     }
 }
