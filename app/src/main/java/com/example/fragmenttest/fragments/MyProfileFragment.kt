@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fragmenttest.BaseFragment
+import com.example.fragmenttest.MainActivity
 import com.example.fragmenttest.NickNameActivity
 import com.example.fragmenttest.R
 import kotlinx.android.synthetic.main.fragment_my_profile.*
 
 class MyProfileFragment : BaseFragment(){
-
 
     val REQ_MESSAGE_CODE  = 1000
 
@@ -45,10 +45,10 @@ class MyProfileFragment : BaseFragment(){
         }
 
         getNickBtn.setOnClickListener {
-//            val name = nickTxt.text.toString()
-//            val myIntent = Intent()
-//            myIntent.putExtra("nowNick",name)
-//            startActivityForResult(myIntent,REQ_MESSAGE_CODE)
+            val name = nickTxt.text.toString()
+            val myIntent = Intent(mContext, MainActivity::class.java)
+            myIntent.putExtra("nowNick",name)
+            startActivityForResult(myIntent,REQ_MESSAGE_CODE)
         }
     }
 
