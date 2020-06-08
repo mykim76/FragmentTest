@@ -13,13 +13,6 @@ class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
     }
 
     override fun getItem(position: Int): Fragment {
-//        if(position==0)
-//        {
-//            return FirstFragment();
-//        }
-//        else if(position==1)
-//        {return SecondFragment();}
-//        else {return ThirdFragment();}
 
         return when(position){
             0->MyProfileFragment()
