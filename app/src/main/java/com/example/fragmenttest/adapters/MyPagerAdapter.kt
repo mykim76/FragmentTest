@@ -20,4 +20,11 @@ class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
         }
     }
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position) {
+            0 -> "프로필 화면"
+            else -> "수강생 목록"
+        }
+    }
+
 }
