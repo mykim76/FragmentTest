@@ -1,9 +1,11 @@
 package com.example.fragmenttest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fragmenttest.adapters.MyPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_my_profile.*
 
 class MainActivity : BaseActivity() {
     lateinit var myPagerAdapter : MyPagerAdapter
@@ -19,11 +21,16 @@ class MainActivity : BaseActivity() {
     override fun setValues() {
 
         myPagerAdapter = MyPagerAdapter(supportFragmentManager)
-        myViewPager.adapter=myPagerAdapter
+        myViewPager.adapter = myPagerAdapter
 
     }
 
     override fun setupEvents() {
-        TODO("Not yet implemented")
+//        getNickBtn.setOnClickListener {
+//            val name = nickTxt.text.toString()
+//            val myIntent = Intent(this, NickNameActivity::class.java)
+//            myIntent.putExtra("nowNick",name)
+//            startActivityForResult(myIntent,REQ_MESSAGE_CODE)
+//        }
     }
 }
